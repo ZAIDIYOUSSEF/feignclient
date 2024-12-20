@@ -1,0 +1,11 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: client-route
+          uri: http://localhost:8088/
+          predicates:
+            - Path=/clients/**
+
+server:
+  port: 8888
